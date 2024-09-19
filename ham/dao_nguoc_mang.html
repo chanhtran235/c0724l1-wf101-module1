@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function: hàm là tập các câu lệnh thực hiện một nhiệm vụ nào đó
+    // Vì sao dung: tái sử dụng code ( viết 1 lần có thể dùng nhiều nơi)
+    // 10,20,30,40,50 => 50,40,30,20,10
+    // phần tử đầu tiên có i =0, phần tử cuối của mảng bất kỳ i = arr.lenght-1
+    //
+    function daoNguocMang(arr) {
+        // đảo ngược mảng arr
+        for (let i = 0; i <arr.length/2 ; i++) {
+            let c = arr[i];
+            arr[i]=arr[arr.length-1-i];
+            arr[arr.length-1-i] =c;
+
+        }
+    }
+    let mang =[10,20,30,40,50];
+    alert("mảng ban đầu "+ mang);
+    daoNguocMang(mang);
+    alert("mảng sau khi đảo "+ mang);
+    let mang2 =["a","b","c"];
+    alert("mảng ban đầu "+ mang2);
+    daoNguocMang(mang2);
+    alert(mang2);
+</script>
+</body>
+</html>
