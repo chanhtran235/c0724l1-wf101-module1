@@ -17,16 +17,12 @@
 
 
 
-    function tinhToan(toanTu) {
-        let num1= +document.getElementById("n1").value;
-        let num2= +document.getElementById("n2").value;
-        let result = eval(num1 +toanTu+ num2);
-        // document.getElementById("result").innerText = "Kết quả là : "+result;
-        document.getElementById("result").innerText = `Kết quả là : ${result}`; // cú pháp mới của ES6 (2015)
-    }
+
     let result =0;
     let num1= document.getElementById("n1");
     let num2= document.getElementById("n2");
+
+
     function add() {
         let n1= +num1.value;
         let n2= +num2.value;
@@ -50,6 +46,13 @@
         let n2= +num2.value;
         result = n1/ n2;
         document.getElementById("result").innerText = result;
+    }
+    function tinhToan(toanTu) {
+        let num1= +document.getElementById("n1").value;
+        let num2= +document.getElementById("n2").value;
+        let result = eval(num1 +toanTu+ num2);
+        // document.getElementById("result").innerText = "Kết quả là : "+result;
+        document.getElementById("result").innerText = `Kết quả là : ${result}`; // cú pháp mới của ES6 (2015)
     }
 </script>
 </body>
