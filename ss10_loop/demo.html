@@ -2,9 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<script>
+    // for(let i = 0; i<10;i++){
+    //     console.log(i);// công việc lặp
+    // }
+    //
+    // let i =0;
+    // while (i<10){
+    //     console.log(i);
+    //     i++;
+    // }
+
+    // i =0 ; => i<4 (true) => in (*****) => i=1
+    //        => i<4 (true) =>> in => i=2
+    //           i<4 (true) =>> in => i =3
+    // biết trước số lần lặp
+    // for(let i = 5; i>0;i--){ // 10 =>9=>8....0
+    //     document.write("**************** <br>");// công viec lặp
+    // }
+    // let i =0;
+    // for(;;){
+    //     i++;// 10 =>9=>8....0
+    //     console.log(i);// công viec lặp
+    //     if (i==10){
+    //         break;
+    //     }
+    // }
+    // console.log("kết thúc chương trình");
+
+    // while (i<10){
+    //     i++;
+    //     console.log(i);
+    // }
+
+    // in ra 71 số trong dãy số tự nhiên chia hết cho 3?
+    // 0,1,2,3............n =>  không đếm được => while
+
+    // let count1=0;
+    // for (let j = 0; ; j++) {
+    //     if (j%3==0){
+    //         count1++;
+    //         console.log(j);
+    //     }
+    //     if (count1==71){
+    //         break;
+    //     }
+    // }
+    // in ra 71 số trong dãy số tự nhiên chia hết cho 3?
+    // 0,1,2,3............n
+
+    // let count2=0;
+    // let i =0;
+    // while (count2<71){
+    //     if (i%3==0){
+    //         count2++;
+    //         console.log(i)
+    //     }
+    //     i++;
+    // }
+
+    // nhập vào một số từ bàn phím,
+    // kiểm tra số đó:
+      // + nếu số đó <0 thì yêu cầu nhập lại?
+      // + nếu số đó >0 thì hiển thị thống báo số vừa nhập
+
+      // => không biết người dùng nhập khi nào là đúng => không biết số lần nhập
+      // => có thể sử dụng vòng lặp while
+
+       // let n = +prompt("nhập vào một số nguyên");
+       // while (n<0){
+       //     n = +prompt("nhập lại");
+       // }
+
+    // Do muốn kiểm tra n thì phải nhập ít nhất 1 lần nên
+    //  do-while => sử dụng hợp lý hơn
+      let n;
+      do {
+          n = +prompt("nhập vào một số nguyên");
+      }while (n<0);
+      alert("số bạn vừa nhập : "+ n);
+
+// có thể sử dụng vòng lặp lồng nhau;
+    for (let i = 1; i <=10 ; i++) {
+        for (let j = 1; j <=10 ; j++) {
+            console.log(i +": "+j)
+        }
+    }
+    // duyệt mảng 2 chiều
+</script>
 </body>
 </html>

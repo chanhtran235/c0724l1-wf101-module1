@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="play1()">
+    Play
+</button>
+<script>
+    function play1() {
+      let n = +prompt("nhập vào khoảng muốn dự đoán:");
+      let randomNumber =Math.ceil(Math.random()*n);
+      let number = +prompt("nhập số cần đoán");
+      let count =1;
+      while (true){
+          if (number<randomNumber){
+              number = +prompt("số bạn nhập nhỏ hơn kết quả. Hãy nhập lại");
+          }else if (number>randomNumber){
+              number = +prompt("số bạn nhập lớn hơn kết quả. Hãy nhập lại");
+          }else {
+              alert("bạn đã đoán đúng");
+              break;
+          }
+          if (count==3){
+              alert("bạn đã thua, hết số lần đoán");
+              break;
+          }
+          count++;
+      }
+    }
+
+</script>
+</body>
+</html>

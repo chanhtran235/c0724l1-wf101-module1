@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<table>
+    <tr>
+        <td colspan="4">
+            <input id="window">
+        </td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="nhap(this.value)" value="1"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="2"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="3"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="+"></td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="nhap(this.value)" value="4"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="5"></td>
+        <td><input type="button"onclick="nhap(this.value)" value="6"></td>
+        <td><input type="button" onclick="nhap(this.value)"value="-"></td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="nhap(this.value)" value="7"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="8"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="9"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="*"></td>
+    </tr>
+    <tr>
+        <td><input onclick="xoa()" type="button" value="C"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="0"></td>
+        <td><input onclick="tinh()" type="button" value="="></td>
+        <td><input type="button" onclick="nhap(this.value)" value="/"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="x"></td>
+    </tr>
+</table>
+<script>
+
+     function nhap(kyTu) {
+         document.getElementById("window").value +=kyTu;
+     }
+
+    // function nhap1() {
+    //    document.getElementById("window").value +=1;
+    // }
+    // function nhap2() {
+    //     document.getElementById("window").value +=2;
+    // }
+    // function nhap3() {
+    //     document.getElementById("window").value +=3;
+    // }
+    // function cong() {
+    //     document.getElementById("window").value +="+";
+    // }
+    function tinh() {
+      let chuoi = document.getElementById("window").value;
+      let ketQua = eval(chuoi);
+        document.getElementById("window").value = ketQua;
+    }
+    function xoa() {
+        document.getElementById("window").value="";
+    }
+</script>
 </body>
 </html>

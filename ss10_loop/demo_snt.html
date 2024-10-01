@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // in ra 20 số nguyên tố ( 20 nguyên tố đầu tiên trong dãy số tự nhiên)
+    // N: 0,1,2,3,4,5,6,7,8,....n
+    // SNT: số tự nhiên lớn hơn 1 và chỉ chia hết cho 1 và chính nó =>  2,3,7,11,13,17,23...
+    // B1 : kiểm tra một số tự nhiên bất kỳ có phải là số NT không.
+    // B2 : in ra 20 số nguyên tố trong dãy số tư nhiên: while (snt<=20) => duyệt 0 => n
+
+    // let n = +prompt("nhập số tự nhiên bất kỳ");
+    // kiểm tra i có phải là số nguyên tố hay không?
+    // kiểm tra xem n%1, n%2 ,.n%i,...n%n => số lần chia hết =2 => i là số nguyên tốlet
+
+    // cách 1:
+    // let n = +prompt("nhập số lương số nguyên tố cần in ra");
+    // let number = 2;
+    // let countSNT = 0; // đếm số lượng số nguyên tố
+    // while (countSNT < n) {
+    //     let count = 0;// đếm số lân chia hết
+    //     for (let i = 2; i <= Math.sqrt(number); i++) {
+    //         if (number % i == 0) {
+    //             count++;
+    //         }
+    //     }
+    //     if (count == 0) {
+    //         countSNT++; // công thêm số lương snt
+    //         console.log(number);
+    //     }
+    //     number++;
+    // }
+
+    // cách 2:
+    let n = +prompt("nhập số lương số nguyên tố cần in ra");
+    let number = 2;
+    let countSNT = 0; // đếm số lượng số nguyên tố
+    while (countSNT < n) {
+        let flag = true;
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                flag =false;
+                break;
+            }
+        }
+        if (flag) {
+            countSNT++; // công thêm số lương snt
+            console.log(number);
+        }
+        number++;
+    }
+
+    // cách 3: dùng function
+
+    // let n = +prompt("nhập số lương số nguyên tố cần in ra");
+    // let number = 2;
+    // let countSNT = 0; // đếm số lượng số nguyên tố
+    // while (countSNT < n) {
+    //     if (isPrime(number)){
+    //         countSNT++;
+    //         console.log(number)
+    //     }
+    //     number++;
+    // }
+    //
+    // function isPrime(n) {
+    //     if (n < 2) {
+    //         return false;
+    //     } else {
+    //         for (let i = 2; i <= Math.sqrt(n); i++) {
+    //             if (n % i == 0) {
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    //     return true;
+    // }
+
+
+</script>
+</body>
+</html>
