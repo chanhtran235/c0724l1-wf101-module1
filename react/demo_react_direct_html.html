@@ -8,36 +8,41 @@
 <body>
 
 <div id="mydiv"></div>
+<script src="HelloComponet.js"></script>
+<!--<script type="text/babel">-->
 
-<script type="text/babel">
+<!--    function Hello() {-->
+<!--        let i = 2;-->
+<!--        let button = React.createElement("button",null,"Click")-->
 
-    function Hello() {
-        let i =2;
-        function f1(a) {
-          return a>0?"ok":"not";
-        }
-        function f2(a) {
-            return a<0?"ok":"not";
-        }
-        return <h1>{
-            f1(1)
-        }</h1>;
-    }
-    // function Hello() {
-    //     return React.createElement("h1",{id:'hello'},"Hello Word");
-    // }
-    //
-    // function Hello() {
-    //     const e =React.createElement("h1",{id:'hello'},"Hello Word");
-    //     console.log(e);
-    //     // console.log(<h1>Hello World!</h1>);
-    //     return e;
-    // }
-    //
-    const container = document.getElementById('mydiv');
-    const root = ReactDOM.createRoot(container);
-    root.render(<Hello/>)
-</script>
+<!--        return (<>-->
+<!--        <div>-->
+<!--            <p>hello</p>-->
+<!--            <ul>-->
+<!--                <li>he1</li>-->
+<!--                <li>he2</li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        </>);-->
+<!--    }-->
+
+<!--    console.log(Hello())-->
+
+<!--    // function Hello() {-->
+<!--    //     return React.createElement("h1",{id:'hello'},"Hello Word");-->
+<!--    // }-->
+<!--    //-->
+<!--    // function Hello() {-->
+<!--    //     const e =React.createElement("h1",{id:'hello'},"Hello Word");-->
+<!--    //     console.log(e);-->
+<!--    //     // console.log(<h1>Hello World!</h1>);-->
+<!--    //     return e;-->
+<!--    // }-->
+<!--    //-->
+<!--    const container = document.getElementById('mydiv');-->
+<!--    const root = ReactDOM.createRoot(container);-->
+<!--    root.render(<Hello/>)-->
+<!--</script>-->
 
 </body>
 </html>

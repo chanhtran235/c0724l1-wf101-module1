@@ -35,26 +35,26 @@
     // }
 
     // cách 2:
-    let n = +prompt("nhập số lương số nguyên tố cần in ra");
-    let number = 2;
-    let countSNT = 0; // đếm số lượng số nguyên tố
-    while (countSNT < n) {
-        let flag = true;
-        for (let i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i == 0) {
-                flag =false;
-                break;
-            }
-        }
-        if (flag) {
-            countSNT++; // công thêm số lương snt
-            console.log(number);
-        }
-        number++;
-    }
-
-    // cách 3: dùng function
-
+    // let n = +prompt("nhập số lương số nguyên tố cần in ra");
+    // let number = 2;
+    // let countSNT = 0; // đếm số lượng số nguyên tố
+    // while (countSNT < n) {
+    //     let flag = true;
+    //     for (let i = 2; i <= Math.sqrt(number); i++) {
+    //         if (number % i == 0) {
+    //             flag =false;
+    //             break;
+    //         }
+    //     }
+    //     if (flag) {
+    //         countSNT++; // công thêm số lương snt
+    //         console.log(number);
+    //     }
+    //     number++;
+    // }
+    //
+    // // cách 3: dùng function
+    //
     // let n = +prompt("nhập số lương số nguyên tố cần in ra");
     // let number = 2;
     // let countSNT = 0; // đếm số lượng số nguyên tố
@@ -78,6 +78,11 @@
     //     }
     //     return true;
     // }
+    // const sum3 = function (a,b) {
+    //   return a+b
+    // }
+    const sum4 =(a,b)=>(a+b); //arrow function
+    console.log(sum4(4,5));
 
 
 </script>
