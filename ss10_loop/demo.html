@@ -93,6 +93,40 @@
         }
     }
     // duyệt mảng 2 chiều
+
+
+    function getData(callback) {  // Hàm nhận tham số callback từ bên ngoài
+        console.log("Bắt đầu lấy dữ liệu...");
+
+        // Giả lập dữ liệu cần lấy
+        const data = { id: 1, name: "John Doe" };
+
+        // Gọi callback đã được truyền từ bên ngoài
+        callback(data);
+    }
+
+    getData((result) => {  // Truyền callback vào khi gọi getData
+        console.log("Kết quả nhận được:", result);
+    });
+
+    function callback(data) {
+        //code
+    }
+
+    function getData() {
+        console.log("Bắt đầu lấy dữ liệu...");
+
+        // Giả lập dữ liệu cần lấy
+        const data = { id: 1, name: "John Doe" };
+
+        // Gọi hàm callback mà không truyền từ bên ngoài
+        callback(data); // Lỗi: callback is not defined
+    }
+    function callback(data) {
+          //code
+    }
+
+    getData(); // Không truyền callback
 </script>
 </body>
 </html>

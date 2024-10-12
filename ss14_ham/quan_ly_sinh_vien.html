@@ -17,8 +17,32 @@
     //  CRUD: 4 chức một trình viên web phải làm được.
     // C: create: thêm mới, R: read: đọc (hiện thị danh sách
     // U : update: (chỉnh sửa) // D: delete (xoá)
+    class SinhVien {
+        // hàm /method nhưng nó đặc biệt
+        // => sự dụng để khởi tạo đối tương và khai báo thuộc tính
+        constructor(id, name,age) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+        }
+        study(subject){
+            console.log(`${this.name} Học viên" đang học môn :  ${subject}`)
+        }
 
-    let studentList = ["Trần Văn Chánh", "Nguyễn Văn B", "Lê Văn C"];
+        getId(){
+            return this.id;
+        }
+
+        setId(id){
+            this.id = id;
+        }
+
+    }
+    let sv1 = new SinhVien(1,"chánh trần 1", 20)
+    let sv2 = new SinhVien(1,"chánh trần 2", 23)
+    let sv3 = new SinhVien(1,"chánh trần 3", 23)
+    let studentList = [sv1,sv2,sv3];
+
     display(studentList, "result1");
 
     function addNewStudent() {
@@ -45,19 +69,22 @@
                             <tr>
                                 <th>STT</th>
                                 <th>Name</th>
+                                <th>Age</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>`;
         for (let i = 0; i < list.length; i++) {
             tableString += `    <tr>
                                 <td>${i + 1}</td>
-                                <td>${list[i]}</td>
+                                <td>${list[i].name}</td>
+                                <td>${list[i].age}</td>
 
                                 <td><button class="btn btn-sm btn-primary" onclick="editStudent(${i})">Edit</button></td>
                                 <td><button class="btn btn-sm btn-danger"  onclick="deleteStudent(${i})">Delete</button></td>
 
                             </tr>`;
         }
+
         document.getElementById("result").innerHTML = tableString;
         document.getElementById("soLuong").innerHTML = studentList.length;
 
