@@ -18,55 +18,56 @@
     // C: create: thêm mới, R: read: đọc (hiện thị danh sách
     // U : update: (chỉnh sửa) // D: delete (xoá)
 
-    let studentList = ["Trần Văn Chánh", "Nguyễn Văn B", "Lê Văn C"];
-    display(studentList, "result1");
 
-    function addNewStudent() {
-        let newStudent = document.getElementById("name").value;
-        if (newStudent != "") {
-            studentList.push(newStudent);
-        } else {
-            alert("yêu cầu nhập")
-        }
-        display(studentList);
-        document.getElementById("name").value = "";
-    }
-
-    function deleteStudent(index) {
-        let conf = confirm("Bạn có muốn xoá sinh viên tên :" + studentList[index] + "?");
-        if (conf) {
-            studentList.splice(index, 1);
-        }
-        display(studentList);
-    }
-
-    function display(list) {
-        let tableString = `<table class="table table-dark" border="1" style="border-collapse:  collapse">
-                            <tr>
-                                <th>STT</th>
-                                <th>Name</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
-                            </tr>`;
-        for (let i = 0; i < list.length; i++) {
-            tableString += `    <tr>
-                                <td>${i + 1}</td>
-                                <td>${list[i]}</td>
-
-                                <td><button class="btn btn-sm btn-primary" onclick="editStudent(${i})">Edit</button></td>
-                                <td><button class="btn btn-sm btn-danger"  onclick="deleteStudent(${i})">Delete</button></td>
-
-                            </tr>`;
-        }
-        document.getElementById("result").innerHTML = tableString;
-        document.getElementById("soLuong").innerHTML = studentList.length;
-
-    }
-    function editStudent(index) {
-        let editStudent = prompt(studentList[index]+".Nhập vào tên cần sửa");
-        studentList[index]= editStudent;
-        display(studentList);
-    }
+    // let studentList = ["Trần Văn Chánh", "Nguyễn Văn B", "Lê Văn C"];
+    // display(studentList, "result1");
+    //
+    // function addNewStudent() {
+    //     let newStudent = document.getElementById("name").value;
+    //     if (newStudent != "") {
+    //         studentList.push(newStudent);
+    //     } else {
+    //         alert("yêu cầu nhập")
+    //     }
+    //     display(studentList);
+    //     document.getElementById("name").value = "";
+    // }
+    //
+    // function deleteStudent(index) {
+    //     let conf = confirm("Bạn có muốn xoá sinh viên tên :" + studentList[index] + "?");
+    //     if (conf) {
+    //         studentList.splice(index, 1);
+    //     }
+    //     display(studentList);
+    // }
+    //
+    // function display(list) {
+    //     let tableString = `<table class="table table-dark" border="1" style="border-collapse:  collapse">
+    //                         <tr>
+    //                             <th>STT</th>
+    //                             <th>Name</th>
+    //                             <th>Edit</th>
+    //                             <th>Delete</th>
+    //                         </tr>`;
+    //     for (let i = 0; i < list.length; i++) {
+    //         tableString += `    <tr>
+    //                             <td>${i + 1}</td>
+    //                             <td>${list[i]}</td>
+    //
+    //                             <td><button class="btn btn-sm btn-primary" onclick="editStudent(${i})">Edit</button></td>
+    //                             <td><button class="btn btn-sm btn-danger"  onclick="deleteStudent(${i})">Delete</button></td>
+    //
+    //                         </tr>`;
+    //     }
+    //     document.getElementById("result").innerHTML = tableString;
+    //     document.getElementById("soLuong").innerHTML = studentList.length;
+    //
+    // }
+    // function editStudent(index) {
+    //     let editStudent = prompt(studentList[index]+".Nhập vào tên cần sửa");
+    //     studentList[index]= editStudent;
+    //     display(studentList);
+    // }
 </script>
 </body>
 </html>
